@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'TeamsCloneProject.urls'
+ROOT_URLCONF = 'TCProject.urls'
 
 TEMPLATES = [
     {
