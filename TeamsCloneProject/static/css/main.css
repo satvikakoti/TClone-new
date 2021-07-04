@@ -1,0 +1,134 @@
+.video-grid-container{
+    display : grid;
+    grid-template-columns:repeat(auto-fill, 300px);
+    width:590px;
+    height:480px;
+    grid-auto-rows: 300px;
+    background-color:gray;
+    box-shadow:0 3px 6px rgba(1,1,1,1);
+}
+
+video{
+    border-radius: 3px;
+    width:590px;
+    height:480px;
+    object-fit: cover;
+    box-shadow:0 3px 6px rgba(0,0,0,0.9);
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+/*.container {
+    padding-top: 50px;
+    width: 50px;
+    margin: 0;
+}*/
+
+input {
+    font-size: 15px;
+    background-color:#33ccc5;
+    border-bottom:3px solid black;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    box-shadow:0 3px 6px rgba(1,1,1,1);
+    caret-color: black;
+    width:135px;
+    color:black;
+    left: 100px;
+}
+
+/*==========================================*/
+
+
+/* This css file is for all home pages and posts */
+
+body {
+  background: #fafafa;
+  color: #333333;
+
+}
+.bg-steel {
+  background-color:#33ccc5!important;
+}
+
+/* this is for the top navigation bar */
+.site-header .navbar-nav .nav-link {
+  color: #33ccc5!important;
+  background-color: #33ccc5!important;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+}
+button{
+    color: white;
+    background-color:#5f788a;
+    border: none;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+  transition: all 0.5s ease;
+  background-color: #33ccc5!important;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+}
+
+.site-header .navbar-nav .nav-link.active .sidenav:active{
+  font-weight: 500;
+  background-color: #33ccc5!important;
+  box-shadow: 0px 0px 10px rgba(255,255,0,0.2)!important;
+}
+
+/* Chat side navigation -- this is for the side navigation bar */
+.sidebar-right-nav {
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  padding-top:150px;
+  z-index: 1;
+  float:right;
+  top:60px;
+  right: 0;
+  text-align:center;
+  color: white;
+  overflow-x: hidden;
+  background-color: #33ccc5!important;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3)!important;
+  transition: all .5s ease 0s;
+}
+
+.sidebar-right-nav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color:  white;
+  display: block;
+  transition: all 0.5s ease;
+  background-color: #33ccc5!important;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3)!important;
+}
+
+.sidebar-right-nav a:hover {
+  color: #ffffff;
+  transition: all 0.5s ease;
+  padding: 16px;
+}
+
+.closed .sidebar-right-nav {
+  right: 0;
+  visibility: visible;
+}
+
+.sidebar-right-nav .closebtn {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  font-size: 25px;
+  margin-right: 0px;
+
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
