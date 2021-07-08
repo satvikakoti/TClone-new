@@ -44,6 +44,11 @@ function webSocketOnMessage(event)
 
 }
 
+document.getElementById('btn-cut-call').addEventListener('click', () =>{
+    console.log('pressed now!');
+    window.history.back();
+});
+
 btnJoin.addEventListener('click', () =>{
     username= usernameInput.value;
 
@@ -206,7 +211,7 @@ var ICE_config = {
 
 function createOfferer(peerUsername, receiver_channel_name)
 {
-    // Works only when devices are connected to same network; hence passing null into RTCPeerConnection
+// Works only when devices are connected to same network; hence passing null into RTCPeerConnection
 //    var peer = new RTCPeerConnection(null);
     var peer = new RTCPeerConnection(ICE_config);
     addLocalTracks(peer);
@@ -226,8 +231,6 @@ function createOfferer(peerUsername, receiver_channel_name)
         var iceConnectionState = peer.iceConnectionState;
         if(iceConnectionState === 'failed'|| iceConnectionState === 'disconnected' || iceConnectionState === 'closed'){
             delete mapPeers[peerUsername];
-            var index = mapScreenPeers.findIndex(remoteVideo);
-            mapScreenPeers.splice(index,1);
             if(iceConnectionState != 'closed')
             {
                 peer.close();
@@ -243,7 +246,6 @@ function createOfferer(peerUsername, receiver_channel_name)
         sendSignal('new-offer',{
             'sdp' : peer.localDescription,
             'receiver_channel_name': receiver_channel_name
-
         });
 
     });
@@ -258,7 +260,6 @@ function createOfferer(peerUsername, receiver_channel_name)
 
 function addLocalTracks(peer){
     localStream.getTracks().forEach(track => {
-//        mapScreenPeers.push(peer.addTrack(track, localStream));
         peer.addTrack(track, localStream);
     });
     mapScreenPeers = peer.getSenders();
@@ -272,7 +273,7 @@ function dcOnMessage(event){
     var li = document.createElement('li');
     li.style.position = "inline";
     li.style.marginRight = "100px";
-    li.style.fontColor = "black";
+    li.style.color = "black";
     li.style.top = "30px";
     li.style.bottom = "50px";
     li.style.zIndex = "1";
@@ -313,8 +314,6 @@ function createAnswerer(offer, peerUsername, receiver_channel_name)
         var iceConnectionState = peer.iceConnectionState;
         if(iceConnectionState === 'failed'|| iceConnectionState === 'disconnected' || iceConnectionState === 'closed'){
             delete mapPeers[peerUsername];
-            var index = mapScreenPeers.findIndex(remoteVideo);
-            mapScreenPeers.splice(index,1);
             if(iceConnectionState != 'closed')
             {
                 peer.close();
@@ -438,4 +437,3 @@ function closeNav() {
 }
 
 /*===========================================*/
-
