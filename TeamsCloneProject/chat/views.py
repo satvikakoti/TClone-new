@@ -1,6 +1,6 @@
 from django.shortcuts import render
-import speech_recognition as sr
-import pyttsx3
+# import speech_recognition as sr
+# import pyttsx3
 
 
 # Create your views here.
@@ -16,6 +16,12 @@ def video_view(request):
     context = {}
 
     return render(request, 'chat/main.html', context=context)
+
+
+def join_view(request):
+    context = {}
+
+    return render(request, 'chat/joinroom.html', context=context)
 
 
 '''r = sr.Recognizer()
