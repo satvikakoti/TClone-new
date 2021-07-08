@@ -19,20 +19,6 @@
     <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
 </head>
 <body>
-<!--        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
-<!--                <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--                  <ul class="navbar-nav mr-auto">-->
-<!--                    <li>-->
-<!--                        <div style="float:right;" class="nav-link">-->
-<!--                            <button class="bg-dark" id="btn-toggle-audio"><i class="fas fa-microphone" style="font-size:20px;"></i></button>-->
-<!--                            <button class="bg-dark" id="btn-toggle-video"><i class="fas fa-video" style="font-size:20px;"></i></button>-->
-<!--                            <button class="bg-dark" id="btn-share-screen" style="font-size:20px;"><i class="fas fa-eye"></i></button>-->
-<!--                            <button class="bg-dark" id="main" onclick="openNav()"><i class="far fa-comments" style="font-size:20px;"></i></button>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--        </nav>-->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
@@ -55,11 +41,31 @@
     </div>
   </header>
 <br><br><br><br><br>
-<h3 id="label-username">USERNAME</h3>
-<div>
-    <input id="username">
-    <button id="btn-join" class="bg-dark">Join Room</button>
-</div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="icon">
+                  <img src="{% static 'images/profile.png' %}" alt="">
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="right-content">
+                    <h3 id="label-username">USERNAME</h3>
+                    <div>
+                        <input id="username">
+                        <button id="btn-join" class="bg-dark">Join Room</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 <div>
     <div id="video-container">
 
@@ -70,20 +76,22 @@
     </div>
 </div>
 <div>
-        <div class="sidebar-right-nav" id="mySidebar">
-            <div>
+        <div class="sidenav bg-dark" id="mySidebar">
+            <div class="col-lg-12">
+                <button class="closebtn bg-dark" onclick="closeNav()">×</button>
                  <h3 class="section-heading"><b>CHAT</b></h3>
-                 <button class="closebtn bg-dark" onclick="closeNav()">×</button>
+
             </div>
-            <div id="messages">
+            <br><br>
+            <div id="messages" class="col-lg-12">
                 <ul id="message-list" class="navbar-nav mr-auto"></ul>
             </div>
-                <input data-emoji-picker="true" type="text" id="msg">
-            <br>
             <div>
-                <button id="btn-send-msg" class="bg-dark">Send</button>
+                 <input data-emoji-picker="true" type="text" id="msg">
             </div>
-
+            <div class="col-lg-8">
+                 <button id="btn-send-msg" class="bg-dark">Send</button>
+            </div>
         </div>
 </div>
 <script src="{% static 'js/main.js' %}"></script>
