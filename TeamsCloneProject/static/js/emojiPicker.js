@@ -30,9 +30,15 @@ class EmojiPicker {
     };
 
     emojiInput.style.width = "200px";
-
+    emojiInput.style.position = "inline";
+    emojiInput.style.marginRight = "1px";
+    emojiInput.style.padding = "7px 7px 7px 7px";
+    emojiInput.style.border = "none";
+    emojiInput.style.caretColor = "white";
+    emojiInput.style.color = "white";
+    emojiInput.style.boxShadow = "0 0px 6px rgba(255,255,255,0.5)";
     const emojiContainer = document.createElement("div");
-    emojiContainer.style.position = "absolute";
+    emojiContainer.style.borderRadius = "0px";
 
     const parent = emojiInput.parentNode;
     parent.replaceChild(emojiContainer, emojiInput);
@@ -49,38 +55,37 @@ class EmojiPicker {
       false
     );
 
-    emojiPicker.style.position = "absolute";
-    emojiPicker.style.right = "2px";
+    emojiPicker.style.position = "inline";
+    emojiPicker.style.marginLeft = "20px";
     emojiPicker.style.outline = "none";
-    emojiPicker.style.top = "20px";
+    emojiPicker.style.top = "none";
     emojiPicker.style.zIndex = "999";
     emojiPicker.style.display = "none";
     emojiPicker.style.width = "150px";
-    emojiPicker.style.padding = "7px 7px 7px 7px";
+    emojiPicker.style.padding = "3px 3px 3px 3px";
     emojiPicker.style.marginTop = "none";
     emojiPicker.style.overflow = "hidden";
     emojiPicker.style.background = "white";
-    emojiPicker.style.height = "150px";
+    emojiPicker.style.height = "200px";
     emojiPicker.style.overflowY = "auto";
-    emojiPicker.style.boxShadow = "0 3px 6px rgba(255,255,255,0.2)";
+    emojiPicker.style.boxShadow = "0 0px 6px rgba(255,255,255,0.5)";
     emojiPicker.style.borderRadius = "2px";
 
     const emojiTrigger = document.createElement("div");
     emojiTrigger.style.position = "absolute";
-    emojiTrigger.style.top = "1px";
-    emojiTrigger.style.height = "200px";
-    emojiTrigger.style.right = "5px";
+    emojiTrigger.style.width = "50px";
+    emojiTrigger.style.top = "none";
+    emojiTrigger.style.left = "150px";
     emojiPicker.style.padding = "7px 7px 7px 7px";
     emojiTrigger.style.textDecoration = "none";
     emojiTrigger.style.overflow = "hidden";
-    emojiTrigger.innerHTML = '<button style="background-color:#343a40;">&#128578;</button>';
+    emojiTrigger.innerHTML = '<button class="col-lg-12" style="background-color:#343a40;">&#128578;</button>';
     emojiTrigger.onclick = () => {
       if (emojiPicker.style.display === "none") {
         emojiPicker.style.display = "block";
       }
       emojiPicker.focus();
     };
-
     emojiContainer.appendChild(emojiTrigger);
 
     const emojiList = document.createElement("ul");
@@ -1081,7 +1086,7 @@ class EmojiPicker {
 
     emojis.map(item => {
       const emojiLi = document.createElement("li");
-      emojiLi.style.display = "inline-block";
+      emojiLi.style.display = "block";
       emojiLi.style.margin = "2px";
 
       const emojiLink = document.createElement("a");
@@ -1100,5 +1105,3 @@ class EmojiPicker {
     emojiContainer.appendChild(emojiPicker);
   }
 }
-
-//module.exports = EmojiPicker;
