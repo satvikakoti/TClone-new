@@ -1,0 +1,124 @@
+.video-grid-container{
+    display : grid;
+    grid-template-columns:repeat(auto-fill, 300px);
+    width:590px;
+    height:480px;
+    grid-auto-rows: 300px;
+    background-color:gray;
+    box-shadow:0 3px 6px rgba(1,1,1,1);
+}
+
+video{
+    border-radius: 3px;
+    width:590px;
+    height:480px;
+    object-fit: cover;
+    box-shadow:0 3px 6px rgba(0,0,0,0.9);
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+input {
+    font-size: 15px;
+    background-color:#33ccc5;
+    border-bottom:3px solid black;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    box-shadow:0 3px 6px rgba(1,1,1,1);
+    caret-color: black;
+    width:135px;
+    color:black;
+    left: 100px;
+}
+
+/*==========================================*/
+
+
+/* This css file is for all home pages and posts */
+
+body {
+  background: #fafafa;
+  color: #333333;
+
+}
+.bg-steel {
+  background-color:#33ccc5!important;
+}
+
+/* this is for the top navigation bar */
+.site-header .navbar-nav .nav-link {
+  color: #33ccc5!important;
+  background-color: #5f788a;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+}
+button{
+    color: white;
+    background-color:#5f788a;
+    border: none;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+  transition: all 0.5s ease;
+  background-color: #33ccc5!important;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+}
+
+.site-header .navbar-nav .nav-link.active .sidenav:active{
+  font-weight: 500;
+  background-color: #33ccc5!important;
+  box-shadow: 0px 0px 10px rgba(255,255,0,0.2)!important;
+}
+
+/* Chat side navigation -- this is for the side navigation bar */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  padding-top:100px;
+  z-index: 10;
+  float:right;
+  top:0;
+  right: 0;
+  text-align:center;
+  color: white;
+  overflow-x: hidden;
+  transition: all 0.5s ease;
+  background-color: #5f788a;
+}
+
+.sidenav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color:  white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #ffffff;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+
+#main {
+  transition: margin-right .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
