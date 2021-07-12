@@ -22,7 +22,7 @@ Since this project is still under deployment, you have to follow these steps to 
 
 ![image](https://user-images.githubusercontent.com/85979410/125254801-706f6180-e318-11eb-868d-2de7fe68dbdc.png)
 
-- Install django and django-channels on this virtual env by running **pip install django** and **pip install djnago-channels**
+- Install django and django-channels on this virtual env by running **pip install django** and **pip install django-channels**
 
 ![image](https://user-images.githubusercontent.com/85979410/125255215-d2c86200-e318-11eb-983a-50887b3107e4.png)
 
@@ -47,7 +47,13 @@ Hurray!! There you go! 🥳
 
 **AGILE Methodologies used:**
 
-![image](https://user-images.githubusercontent.com/85979410/125309570-7fbdd180-e34f-11eb-973b-f0571378f09f.png)
+Scrum methodology has been used throughout where in tasks were divided into sprints of four weeks to produce deliverables.
+Tasks for development of this application have been majorly divided into the following:
+ 1. Sprint 1 consisted of developing basic peer to peer communication. Faced issues, but resolved.
+ 2. Sprint 2 consisted of addition of chat feature between users. That being done, screen sharing option was the next deliverable.
+ 3. Sprint 3 was to complete screen sharing and develop voice assistant feature. Both had few bugs, that were resolved with some research.
+ 4. Sprint 4 focused on addition of working voice assistant, emoji feature and calendar to application. 
+All this while, codes were pushed onto GitHub and deployment started, although it was not successful.
 
 ![image](https://user-images.githubusercontent.com/85979410/125310609-5f424700-e350-11eb-8164-e4649fb2c45a.png)
 
