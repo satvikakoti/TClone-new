@@ -43,3 +43,5 @@ Since this project is still under deployment, you have to follow these steps to 
 Copy the given localhost URL, i.e. http://127.0.0.1:8000/ to view the application.
 
 Hurray!! There you go! 🥳
+
+![image](https://user-images.githubusercontent.com/85979410/125309570-7fbdd180-e34f-11eb-973b-f0571378f09f.png)
