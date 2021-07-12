@@ -44,4 +44,12 @@ Copy the given localhost URL, i.e. http://127.0.0.1:8000/ to view the applicatio
 
 Hurray!! There you go! 🥳
 
+
+**AGILE Methodologies used:**
+
 ![image](https://user-images.githubusercontent.com/85979410/125309570-7fbdd180-e34f-11eb-973b-f0571378f09f.png)
+
+![image](https://user-images.githubusercontent.com/85979410/125310609-5f424700-e350-11eb-8164-e4649fb2c45a.png)
+
+
+**Be smart...Be Agile...** 😄
