@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TClone</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="shortcut icon" href="#">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-seo-dream.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+</head>
+<body>
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <ul>
+		<li>
+		<div><br></div>
+		    <div class="dropdown">
+    				<button class="bg-dark" id="btn-participants" style="font-size:20px;">
+      					<i class='fas fa-user-friends'></i>
+    				</button>
+    		    	<div class="dropdown-content bg-dark">
+				<ul id="participant-list"></ul>
+    		    	</div>
+			<div style="width:150px;"><br></div>
+		   </div>
+		</li>
+                <li>
+                     <div style="float:right;" class="nav-link">
+                         <button class="bg-dark" id="main" onclick="openNav()"><i class="far fa-comments" style="font-size:20px;"></i></button>
+                        <button class="bg-dark" id="btn-toggle-audio"><i class="fas fa-microphone" style="font-size:20px;"></i></button>
+                        <button class="bg-dark" id="btn-toggle-video"><i class="fas fa-video" style="font-size:20px;"></i></button>
+                         <button class="bg-dark" id="btn-share-screen" style="font-size:20px;"><i class="fas fa-eye"></i></button>
+			<button class="bg-dark" id="btn-cut-call" style="font-size:20px;">&#128222;</button>
+                 </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+<br><br><br><br><br>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="icon">
+                  <img src="{% static 'images/profile.png' %}" alt="">
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="right-content">
+                    <h3 id="label-username">USERNAME</h3>
+                    <div>
+                        <input id="username">
+                        <button id="btn-join" class="bg-dark">Join Room</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div>
+    <div id="video-container">
+
+        <div>
+            <video id="local-video" style="float:left;" poster="{% static 'images/profile.png' %}" controls  width="590px" height="480px" autoplay playsinline></video>
+        </div>
+
+    </div>
+</div>
+<div>
+        <div class="sidenav bg-dark" id="mySidebar">
+            <div class="col-lg-12">
+                <button class="closebtn bg-dark" onclick="closeNav()">×</button>
+                 <h3 class="section-heading"><b>CHAT</b></h3>
+
+            </div>
+            <br><br>
+            <div id="messages" class="col-lg-12">
+                <ul id="message-list" class="navbar-nav mr-auto"></ul>
+            </div>
+            <div>
+                 <input data-emoji-picker="true" type="text" id="msg">
+            </div>
+            <div class="col-lg-8">
+                 <button id="btn-send-msg" class="bg-dark">Send</button>
+            </div>
+        </div>
+</div>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/emojiPicker.js' %}"></script>
+<script>
+    (() => {
+      new EmojiPicker()
+    })()
+  </script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+</html>
