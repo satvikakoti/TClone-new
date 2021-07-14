@@ -31,10 +31,14 @@ var transcript = event.results[current][0].transcript;
     var n = transcript.split(" ");
     Content = n[n.length - 1];
     Textbox = Content;
-    if(Content=="yes")
+    if(Content=="join")
     {
         var newContent = askJoinRoom();
         location.href = 'video/';
+    }
+    else if(Content=="calendar")
+    {
+        location.href = 'calendar/';
     }
     else if(Content=="no")
     {
@@ -66,7 +70,7 @@ recognition.onerror = function(event) {
 
 document.getElementById('start-btn').addEventListener ('click', () =>
 {
-            msg.text = 'Hello! Welcome to T Clone! Would you like to try out voice assistant?';
+            msg.text = 'Hello! Welcome to T Clone! Would you like to try out voice assistant? Please say join to join room, calendar to view calendar otherwise no';
             Content=msg;
             speechSynthesis.speak(msg);
 
